@@ -1,2 +1,2 @@
 # MyNIX
-MINIX 1.0
+MINIX
