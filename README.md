@@ -6,6 +6,6 @@ This project is for learning purposes. My goals are:
 2. Write MyNIX 1.0 for i8088 to begin with.
 3. Write MyNIX 1.0 for x86_64.
 4. Add documentation to the code as I learn.
-5. Boot and use MyNIX in QEMU.
+5. Boot and use MyNIX with QEMU.
 
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
