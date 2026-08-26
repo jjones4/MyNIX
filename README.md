@@ -1,5 +1,6 @@
 # MyNIX
 MINIX
+This project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
 
 MyNIX 1.0 C89 i8088
 1. Add documentation to the original code as I learn
