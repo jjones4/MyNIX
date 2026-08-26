@@ -1,3 +1,12 @@
+/* Copyright (C) 1987 by Prentice-Hall, Inc.  Permission is hereby granted to
+ * private individuals and educational institutions to modify and
+ * redistribute the binary and source programs of this system to other
+ * private individuals and educational institutions for educational and
+ * research purposes.  For corporate or commercial use, permission from
+ * Prentice-Hall is required.  In general, such permission will be granted,
+ * subject to a few conditions.
+ */
+
 /*
  * Directory h contains files defining constants, types, and macros needed  in
  * more than one of the following independent parts (programs) of MINIX:
