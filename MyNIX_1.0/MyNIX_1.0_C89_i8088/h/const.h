@@ -28,7 +28,7 @@
 #define TRUE		1   		/* used for turning integers into Booleans */
 #define FALSE		0	    	/* used for turning integers into Booleans */
 
-#define HZ		60	        	/* clock freq (software settable on IBM-PC) */
+#define HZ	    	60	       	/* clock freq (software settable on IBM-PC) */
 #define BLOCK_SIZE	1024		/* # bytes in a disk block */
 #define SUPER_USER	(uid) 0		/* uid of superuser */
 
