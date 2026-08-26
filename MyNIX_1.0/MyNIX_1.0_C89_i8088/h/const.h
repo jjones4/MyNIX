@@ -6,7 +6,9 @@
  *  3. File System
  *  4. Init
  *
- * (Operating Systems Design and Implementation, Tanenbaum, pp. 91-92.)
+ * Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation.
+ * Englewood Cliffs, NJ: Prentice-Hall.
+ * Sections 2.6.1 - 2.6.2
  */
 
 #define EXTERN		extern	/* used in *.h files */
