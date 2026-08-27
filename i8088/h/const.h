@@ -38,7 +38,7 @@
  *
  * Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation.
  * Englewood Cliffs, NJ: Prentice-Hall.
- * Sections 1.3.2
+ * Section 1.3.2
  */
 #define MAJOR		    8	    	/* major device = (dev>>MAJOR) & 0377 */
 #define MINOR		    0	    	/* minor device = (dev>>MINOR) & 0377 */
@@ -51,7 +51,7 @@
  *
  * Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation.
  * Englewood Cliffs, NJ: Prentice-Hall.
- * Sections 1.4.1
+ * Section 1.4.1
 */
 #define NR_SEGS         3           /* # segments per process */
 
