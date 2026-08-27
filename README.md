@@ -3,7 +3,7 @@ MINIX 1.0
 
 This project is for learning purposes.
 
-My broad goals are:
+Main goals include:
 1. Write MyNIX 1.0 to be C89 compliant.
 2. Write MyNIX 1.0 for i8088 to begin with.
 3. Write MyNIX 1.0 for x86_64.
