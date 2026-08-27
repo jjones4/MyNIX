@@ -1,7 +1,6 @@
 /*
  * Processes send messages to MM or FS. These messages contain the number of
- * the system call (from below). This is how system calls are run on behalf
- * of processes.
+ * system call (from below) the process wants.
  *
  * Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation.
  * Englewood Cliffs, NJ: Prentice-Hall.
