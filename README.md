@@ -7,5 +7,7 @@ This project is for learning purposes. My goals are:
 3. Write MyNIX 1.0 for x86_64.
 4. Add documentation to the code as I learn.
 5. Boot and use MyNIX with QEMU.
+6. Build out a toolchain to put MyNIX 1.0 on HDD and SSD devices.
+7. Run MyNIX 1.0 on PC.
 
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
