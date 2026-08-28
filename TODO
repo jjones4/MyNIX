@@ -1,5 +1,6 @@
 Proofread const.h in i8088/h
 Proofread callnr.h in i8088/h
+Proofread com.h in i8088/h
 
 Figure out if these are parameterized macros of something else:
 #define ROOT_DEV (dev_nr)   256         /* major-minor device number of root dev */
