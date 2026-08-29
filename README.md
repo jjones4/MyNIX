@@ -16,6 +16,8 @@ Main goals include:
 10. Use MyNIX as a basic, offline OS for text editing, audio, video, selft-hosting, and tool building.
 11. Ensure MyNIX works with some kind of local backup solution (preferably, saving files to a thumb drive).
 12. Implement encryption for sensitive files on the disk and support encryption for removable drives.
+13. Add a printer/scanner driver.
+14. Add support for PDF files.
 
 Design goals include:
 1. Keep the code simpler to support security and ease of reading/writing the code, even if efficiency is decreased.
