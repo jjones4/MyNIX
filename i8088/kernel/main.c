@@ -11,3 +11,10 @@
  */
 
 #include "../h/const.h"
+
+PUBLIC int main(void)
+{
+    /*Start the ball rolling. */
+
+    return 0;
+}
