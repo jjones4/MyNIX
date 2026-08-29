@@ -12,8 +12,21 @@
 
 #include "../h/const.h"
 #include "../h/type.h"
+#include "../h/callnr.h"
+#include "../h/com.h"
+#include "../h/error.h"
+#include "const.h"
+#include "type.h"
+#include "glo.h"
+#include "proc.h"
 
-
+#define SAFETY             8	/* margin of safety for stack overflow (ints)*/
+#define VERY_BIG       39328	/* must be bigger than kernel size (clicks) */
+#define BASE            1536	/* address where MINIX starts in memory */
+#define SIZES              8	/* sizes array has 8 entries */
+#define CPU_TY1       0xFFFF	/* BIOS segment that tells CPU type */
+#define CPU_TY2       0x000E	/* BIOS offset that tells CPU type */
+#define PC_AT           0xFC	/* IBM code for PC-AT (in BIOS at 0xFFFFE) */
 
 /*============================================================================*
  *                                   main                                     *

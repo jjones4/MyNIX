@@ -7,7 +7,7 @@
 
 #ifdef i8088
 struct pc_psw {
-  int (*pc)();			/* storage for program counter */
+  int (*pc)(void);			/* storage for program counter */
   phys_clicks cs;		/* code segment register */
   unsigned psw;			/* program status word */
 };
