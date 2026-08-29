@@ -11,6 +11,8 @@ Main goals include:
 5. Boot and use MyNIX with QEMU.
 6. Make a toolchain to put MyNIX 1.0 on HDD and SSD devices.
 7. Run MyNIX 1.0 on PC.
+8. Avoid networking for now, as security is a concern.
+9. Use MyNIX as a basic, local OS for text editing, audio, and video.
 
 Design goals include:
 1. Keep the code simpler to support security and ease of reading/writing the code, even if efficiency is decreased.
