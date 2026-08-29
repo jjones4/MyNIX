@@ -18,15 +18,6 @@
 #include "const.h"
 #include "type.h"
 #include "glo.h"
-
-/* To compile after this point, the symbol -Di8088 is needed so NR_REGS is
- * available to kernel/proc.h due to #ifdef i8088 in kernel/const.h. Compiling
- * completes with no errors at this point:
- *
- *  gcc -Di8088 -std=c89 -O -Wall -Wextra -W -pedantic -Werror
- *  -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes
- *  -Wdeclaration-after-statement -g main.c -o main
- */
 #include "proc.h"
 
 #define SAFETY             8	/* margin of safety for stack overflow (ints)*/
