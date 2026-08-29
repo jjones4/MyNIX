@@ -19,6 +19,6 @@ Design goals include:
 1. Keep the code simpler to support security and ease of reading/writing the code, even if efficiency is decreased.
 2. Write maintainable code.
 3. Code with the future in mind (new hardware, ease of adapting new features, etc.).
-4. Keep portability as a high priority.
+4. Keep portability as a high priority. (Make sure non-portable code is in its own place with other such code, and make sure it is easy to distinguish from portable code.)
 
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
