@@ -3,10 +3,7 @@ MINIX 1.0
 
 Currently compiling with no errors or warnings:
 
-gcc -Di8088 -std=c89 -O -Wall -Wextra -W -pedantic
-  -Werror -Wstrict-prototypes -Wold-style-definition
-  -Wmissing-prototypes -Wdeclaration-after-statement
-  -g main.c table.c -o MyNIX
+gcc -Di8088 -std=c89 -O -Wall -Wextra -W -pedantic -Werror -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wdeclaration-after-statement -g main.c table.c -o MyNIX
 
 This project is for learning purposes.
 
