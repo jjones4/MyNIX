@@ -1,7 +1,7 @@
-Proofread const.h in i8088/h
-Proofread callnr.h in i8088/h
-Proofread com.h in i8088/h
+Remove commented-out code from table.c:
+  1. I commented out extern int sys_task() ... printer_task().
+  2. I also commented out int (*task[ ... sys_task, 0, 0, 0, 0 };
 
-Figure out if these are parameterized macros of something else:
-#define ROOT_DEV (dev_nr)   256         /* major-minor device number of root dev */
-#define BOOT_DEV (dev_nr)   512         /* major-minor device number of boot diskette */
+The reason this code is commented out is because I needed table.c in the compilation process so struct proc would have memory (and not be preceeded by EXTERN).
+
+I need struct proc in main.c so the program will compile.
