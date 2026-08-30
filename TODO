@@ -2,7 +2,7 @@ Remove commented-out code from table.c:
   1. I commented out extern int sys_task() ... printer_task().
   2. I also commented out int (*task[ ... sys_task, 0, 0, 0, 0 };
 
-The reason this code is commented out is because I needed table.c in the compilation process,
+The code is commented out because I needed table.c in the compilation process,
 but I haven't gotten around to fixing the K&R style function prototypes in table.c yet.
 
 I need struct proc from table.c so struct proc in main.c has memory (since EXTERN is redifined
