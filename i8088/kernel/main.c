@@ -46,7 +46,9 @@ PUBLIC int main(void)
    */
 
     for (rp = &proc[0]; rp <= &proc[NR_TASKS + LOW_USER]; rp++) {
-        for (t = 0; t < NR_REGS; t++) rp->p_reg[t] = 0100 * t;       /* DEBUG */
+        for (t = 0; t < NR_REGS; t++) rp->p_reg[t] = 0100 * t;  /* DEBUG */
+        t = rp - proc - NR_TASKS;                               /* task number */
+        rp->p_sp = (rp < &proc[NR_TASKS] ? t_stack[NR_TASKS + t + 1].stk : INIT_SP);
     }
 
     return 0;
