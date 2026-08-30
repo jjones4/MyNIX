@@ -36,9 +36,17 @@ PUBLIC int main(void)
     /*Start the ball rolling. */
     
     register struct proc *rp;
+    register int t;
+
+    /* Set up proc table entry for user processes.  Be very careful about
+   * sp, since the 3 words prior to it will be clobbered when the kernel pushes
+   * pc, cs, and psw onto the USER's stack when starting the user the first
+   * time.  This means that with initial sp = 0x10, user programs must leave 
+   * the words at 0x000A, 0x000C, and 0x000E free.
+   */
 
     for (rp = &proc[0]; rp <= &proc[NR_TASKS + LOW_USER]; rp++) {
-        
+        for (t = 0; t < NR_REGS; t++) rp->p_reg[t] = 0100 * t;       /* DEBUG */
     }
 
     return 0;
