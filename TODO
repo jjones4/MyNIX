@@ -5,4 +5,4 @@ Remove commented-out code from table.c:
 The reason this code is commented out is because I needed table.c in the compilation process,
 but I haven't gotten around to fixing the K&R style function prototypes in table.c yet.
 
-I need struct proc from table.c to have memory (i.e., not be preceeded by EXTERN) so main.c will compile.
+I need struct proc from table.c so struct proc in main.c has memory.
