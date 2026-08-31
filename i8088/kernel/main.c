@@ -51,7 +51,7 @@ PUBLIC int main(void)
         rp->p_sp = (rp < &proc[NR_TASKS] ? t_stack[NR_TASKS + t + 1].stk : INIT_SP);
         rp->p_splimit = rp->p_sp;
         if (rp->p_splimit != INIT_SP)
-            rp->p_splimit -= (TASK_STACK_BYTES - SAFETY)/sizeof(int);        
+            rp->p_splimit -= (TASK_STACK_BYTES - SAFETY) / sizeof(int);        
     }
 
     return 0;
