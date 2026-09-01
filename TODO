@@ -8,3 +8,6 @@ but I haven't gotten around to fixing the K&R style function prototypes in table
 I need struct proc from table.c so struct proc in main.c has memory (since EXTERN is redifined
 as null string in table.c). This means table.c provides the one place where struct proc is NOT
 extern, which means it is allocated memory when MyNIX is compiled.
+
+To remove the comments from int (*task[ ...}; in table.c, I will need to figure out where the
+function pointers are initialized from. I need the tasks in main.c right away.
