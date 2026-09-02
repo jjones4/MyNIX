@@ -32,17 +32,15 @@
 #include "glo.h"
 #include "proc.h"
 
-/*
-extern int sys_task(), clock_task(), mem_task(), floppy_task(),
-           winchester_task(), tty_task(), printer_task();
-*/
+extern int sys_task(void), clock_task(void),  mem_task(void), floppy_task(void),
+           winchester_task(void), tty_task(void), printer_task(void);
 
 /* The startup routine of each task is given below, from -NR_TASKS upwards.
  * The order of the names here MUST agree with the numerical values assigned to
  * the tasks in ../h/com.h.
  */
 
-int (*task[NR_TASKS+INIT_PROC_NR+1])() = {
+int (*task[NR_TASKS+INIT_PROC_NR+1])(void) = {
  printer_task, tty_task, winchester_task, floppy_task, mem_task,
  clock_task, sys_task, 0, 0, 0, 0
 };
