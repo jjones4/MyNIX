@@ -10,17 +10,18 @@ Main goals include:
 2. Make MyNIX 1.0 POSIX compliant.
 3. Write MyNIX 1.0 for i8088 to begin with.
 4. Write MyNIX 1.0 for x86_64.
-5. Add documentation to the code as I learn.
-6. Boot and use MyNIX with QEMU.
-7. Build a toolchain to put MyNIX 1.0 on HDD and SSD devices.
-8. Run MyNIX 1.0 on PC.
-9. Avoid networking for now, as security is a concern.
-10. Use MyNIX as a basic, offline OS for text editing, audio, video, selft-hosting, and tool building.
-11. Decide if I want to stick with ACK or build in a different compiler (or both).
-12. Ensure MyNIX works with some kind of local backup solution (preferably, saving files to a thumb drive).
-13. Implement encryption for sensitive files on the disk and support encryption for removable drives.
-14. Add a printer/scanner driver.
-15. Add support for PDF files.
+5. Add multi-threading.
+6. Add documentation to the code as I learn.
+7. Boot and use MyNIX with QEMU.
+8. Build a toolchain to put MyNIX 1.0 on HDD and SSD devices.
+9. Run MyNIX 1.0 on PC.
+10. Avoid networking for now, as security is a concern.
+11. Use MyNIX as a basic, offline OS for text editing, audio, video, selft-hosting, and tool building.
+12. Decide if I want to stick with ACK or build in a different compiler (or both).
+13. Ensure MyNIX works with some kind of local backup solution (preferably, saving files to a thumb drive).
+14. Implement encryption for sensitive files on the disk and support encryption for removable drives.
+15. Add a printer/scanner driver.
+16. Add support for PDF files.
 
 Design goals include:
 1. Keep the code simpler to support security and ease of reading/writing the code, even if efficiency is decreased.
