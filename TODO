@@ -1,13 +1,3 @@
-Remove commented-out code from table.c:
-  1. I commented out extern int sys_task() ... printer_task().
-  2. I also commented out int (*task[ ... sys_task, 0, 0, 0, 0 };
-
-The code is commented out because I needed table.c in the compilation process,
-but I haven't gotten around to fixing the K&R style function prototypes in table.c yet.
-
-I need struct proc from table.c so struct proc in main.c has memory (since EXTERN is redifined
-as null string in table.c). This means table.c provides the one place where struct proc is NOT
-extern, which means it is allocated memory when MyNIX is compiled.
-
-To remove the comments from int (*task[ ...}; in table.c, I will need to figure out where the
-function pointers are initialized from. I need the tasks in main.c right away.
+1. Determine if MINIX uses virtual memory paging.
+2. Decide if I am going to add virtual memory support (if MINIX does not include it).
+3. Add virtual memory support to goals in README.md.
