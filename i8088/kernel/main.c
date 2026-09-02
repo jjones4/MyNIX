@@ -31,13 +31,15 @@
 /*============================================================================*
  *                                   main                                     *
  *============================================================================*/
+
+extern int (*task[])(void);
+
 PUBLIC int main(void)
 {
     /*Start the ball rolling. */
     
     register struct proc *rp;
     register int t;
-    extern int (*task[])(void);
 
     /* Set up proc table entry for user processes.  Be very careful about
    * sp, since the 3 words prior to it will be clobbered when the kernel pushes
