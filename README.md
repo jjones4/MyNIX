@@ -1,7 +1,7 @@
 # MyNIX
 MINIX 1.0
 
-gcc -Di8088 -std=c89 -O2 -Wall -Wextra -Wpedantic -Wformat=2 -Wno-unused-parameter -Wshadow -Wwrite-strings -Wstrict-prototypes -Wold-style-definition -Wredundant-decls -Wnested-externs -Wmissing-include-dirs -Wjump-misses-init -Wlogical-op -Wmissing-prototypes -Wdeclaration-after-statement -g main.c table.c -o MyNIX
+gcc -Di8088 -std=c89 -O2 -Wall -Wextra -Wpedantic -Wformat=2 -Wno-unused-parameter -Wshadow -Wwrite-strings -Wstrict-prototypes -Wold-style-definition -Wredundant-decls -Wnested-externs -Wmissing-include-dirs -Wjump-misses-init -Wlogical-op -Wmissing-prototypes -Wdeclaration-after-statement -g main.c table.c clock.c system.c tty.c wini.c floppy.c memory.c printer.c -o MyNIX
 
 This project is for learning purposes.
 
