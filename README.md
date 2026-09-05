@@ -3,26 +3,25 @@ MINIX 1.0
 
 This project is for learning purposes.
 
-Main goals include:
-1. Write MyNIX 1.0 to be C89 compliant.
-2. Make MyNIX 1.0 POSIX compliant.
-3. Write MyNIX 1.0 for i8088 to begin with.
-4. Write MyNIX 1.0 for x86 64.
-5. Add multi-threading.
-6. Add documentation to the code as I learn.
-7. Boot and use MyNIX with QEMU.
-8. Build a toolchain to put MyNIX 1.0 on HDD and SSD devices.
-9. Run MyNIX 1.0 on PC.
-10. Avoid networking for now, as security is a concern.
-11. Use MyNIX as a basic, offline OS for text editing, audio, video, selft-hosting, and tool building.
-12. Decide if I want to stick with ACK or build in a different compiler (or both).
-13. Ensure MyNIX works with some kind of local backup solution (preferably, saving files to a thumb drive).
-14. Implement encryption for sensitive files on the disk and support encryption for removable drives.
-15. Add a printer/scanner driver.
-16. Add support for PDF files.
+I want to map the learning path as follows:
+1. Add documentation to MyNIX source code as I learn.
+2. Make MyNIX C89 compliant.
+3. Make MyNIX POSIX compliant.
+4. Get MyNIX working on i8088 with QEMU.
+5. Get MyNIX working on x86-64 with QEMU.
+9. Find a way to put MyNIX on HDD and SSD devices.
+10. Run MyNIX on PC.
 
-Design goals include:
-1. Keep the code simpler to support security and ease of reading/writing the code, even if efficiency is decreased.
+Long term goals include:
+1. Use MyNIX as a basic offline OS.
+2. Add the ability to encrypt and back up files to removable media.
+3. Build in a compiler such as gcc or Clang.
+4. Add support for file types like PDF and printing.
+5. Go self-hosting.
+6. Read real-world sections in the xv6 book and implement things mentioned there like multithreading, etc.
+
+Big-picture goals include:
+1. Keep the code simple to support security and ease of reading/writing the code, even if efficiency is decreased.
 2. Write maintainable code.
 3. Code with the future in mind (new hardware, ease of adapting new features, etc.).
 4. Keep portability as a high priority. (Make sure non-portable code is in its own place with other such code, and make sure it is easy to distinguish from portable code.)
