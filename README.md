@@ -7,7 +7,7 @@ Main goals include:
 1. Write MyNIX 1.0 to be C89 compliant.
 2. Make MyNIX 1.0 POSIX compliant.
 3. Write MyNIX 1.0 for i8088 to begin with.
-4. Write MyNIX 1.0 for x86_64.
+4. Write MyNIX 1.0 for x86 64.
 5. Add multi-threading.
 6. Add documentation to the code as I learn.
 7. Boot and use MyNIX with QEMU.
