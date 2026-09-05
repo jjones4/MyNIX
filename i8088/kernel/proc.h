@@ -29,6 +29,8 @@ EXTERN struct proc {
   int p_pending;		        /* bit map for pending signals 1-16 */
 } proc[NR_TASKS+NR_PROCS];
 
+PUBLIC void ready(register struct proc *rp);
+
 /* Bits for p_flags in proc[].  A process is runnable iff p_flags == 0 */
 #define P_SLOT_FREE      001	/* set when slot is not in use */
 #define NO_MAP           002	/* keeps unmapped forked child from running */

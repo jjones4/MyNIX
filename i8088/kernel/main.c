@@ -56,7 +56,7 @@ PUBLIC int main(void)
         if (rp->p_splimit != INIT_SP)
             rp->p_splimit -= (TASK_STACK_BYTES - SAFETY) / sizeof(int);
         rp->p_pcpsw.pc = task[t + NR_TASKS];
-        /* if (rp->p_pcpsw.pc != 0 || t >= 0) ready(rp); */
+        if (rp->p_pcpsw.pc != 0 || t >= 0) ready(rp);
     }
 
     return 0;
