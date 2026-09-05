@@ -1,4 +1,5 @@
-1. Fill in the executable code for the ready() function in proc.c, which needs lock().
-2. Fill in the executable code for all the tasks (clock_task, tty_task, etc.).
-2. Determine if MINIX uses virtual memory paging.
-3. Add virtual memory support to goals in README.md.
+1. Create .h files for all the tasks (i.e., clock_task, tty_task, etc.) for defines, includes, and function prototypes.
+2. Include the .h files for the tasks in relevant source files.
+3. Fill in the executable code for all the tasks.
+4. Protect from multiple redundant header file inclusions using #ifdefs.
+5. Fill in the executable code for the ready() function in proc.c, which needs lock().
