@@ -1,3 +1,4 @@
-1. Determine if MINIX uses virtual memory paging.
-2. Decide if I am going to add virtual memory support (if MINIX does not include it).
-3. Add virtual memory support to goals in README.md.
+1. Fill in the executable code for the ready() function in proc.c, which needs lock()
+2. Determine if MINIX uses virtual memory paging.
+3. Decide if I am going to add virtual memory support (if MINIX does not include it).
+4. Add virtual memory support to goals in README.md.
