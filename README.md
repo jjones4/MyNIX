@@ -28,6 +28,4 @@ Big-picture goals include:
 
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
 
-Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation.
-
-  Englewood Cliffs, NJ: Prentice-Hall.
+Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation. Englewood Cliffs, NJ: Prentice-Hall.
