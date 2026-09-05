@@ -27,3 +27,6 @@ Big-picture goals include:
 4. Keep portability as a high priority. (Make sure non-portable code is in its own place with other such code, and make sure it is easy to distinguish from portable code.)
 
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
+
+Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation.
+  Englewood Cliffs, NJ: Prentice-Hall.
