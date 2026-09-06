@@ -9,5 +9,5 @@ My learning path is the following:
 
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
 
-Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation. 
-&emsp;  Englewood Cliffs, NJ: Prentice-Hall.
+Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation.  
+&emsp; Englewood Cliffs, NJ: Prentice-Hall.
