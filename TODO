@@ -1,6 +1,6 @@
 1. Create .h files for all the tasks (i.e., clock_task, tty_task, etc.) for defines, includes, and function prototypes.
 2. Include the .h files for the tasks in relevant source files.
 3. Fill in the executable code for all the tasks.
-4. Protect from multiple redundant header file inclusions using #ifdefs.
-5. Fill in the executable code for the ready() function in proc.c, which needs lock().
-6. Build a cross compiler for i386 target and start cross compiling MyNIX.
+4. Fill in the executable code for the ready() function in proc.c, which needs lock().
+5. Build a cross compiler for i386 target and start cross compiling MyNIX.
+6. Get MyNIX working in QEMU as quickly as possible for testing.
