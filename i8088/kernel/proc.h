@@ -1,3 +1,6 @@
+#ifndef K_PROC_H
+#define K_PROC_H
+
 /* Here is the declaration of the process table.  Three assembly code routines
  * reference fields in it.  They are restart(), save(), and csv().  When 
  * changing 'proc', be sure to change the field offsets built into the code.
@@ -47,3 +50,5 @@ EXTERN struct proc *rdy_tail[NQ];	    /* pointers to ready list tails */
 
 EXTERN unsigned busy_map;		        /* bit map of busy tasks */
 EXTERN message *task_mess[NR_TASKS+1];	/* ptrs to messages for busy tasks */
+
+#endif                          /* K_PROC_H */

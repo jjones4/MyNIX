@@ -1,3 +1,6 @@
+#ifndef K_GLO_H
+#define K_GLO_H
+
 /* Global variables used in the kernel. */
 
 /* Clocks and timers */
@@ -20,3 +23,5 @@ EXTERN struct t_stack {
 } t_stack[NR_TASKS - 1];	        /* task stacks; task = -1 never really runs */
 
 EXTERN char k_stack[K_STACK_BYTES];	/* The kernel stack. */
+
+#endif                              /* K_GLO_H */

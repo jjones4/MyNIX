@@ -1,3 +1,6 @@
+#ifndef K_CONST_H
+#define K_CONST_H
+
 /* General constants used by the kernel. */
 
 #ifdef i8088
@@ -49,3 +52,5 @@
 #define USER_Q             2	/* ready users are scheduled via queue 2 */
 
 #define printf        printk	/* the kernel really uses printk, not printf */
+
+#endif                          /* K_CONST_H */

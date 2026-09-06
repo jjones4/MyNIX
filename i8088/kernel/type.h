@@ -1,3 +1,6 @@
+#ifndef K_TYPE_H
+#define K_TYPE_H
+
 /* The 'pc_psw' struct is machine dependent.  It must contain the information
  * pushed onto the stack by an interrupt, in the same format as the hardware
  * creates and expects.  It is used for storing the interrupt status after a
@@ -7,14 +10,16 @@
 
 #ifdef i8088
 struct pc_psw {
-  int (*pc)(void);			/* storage for program counter */
-  phys_clicks cs;		/* code segment register */
-  unsigned psw;			/* program status word */
+  int (*pc)(void);		    /* storage for program counter */
+  phys_clicks cs;		    /* code segment register */
+  unsigned psw;			    /* program status word */
 };
 
 /* This struct is used to build data structure pushed by kernel upon signal. */
 struct sig_info {
-  int signo;			/* sig number at end of stack */
+  int signo;			    /* sig number at end of stack */
   struct pc_psw sigpcpsw;
 };
-#endif
+#endif                      /* i8088 */
+
+#endif                      /* K_TYPE_H */
