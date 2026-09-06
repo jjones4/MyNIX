@@ -1,3 +1,6 @@
+#ifndef H_SGTTY_H
+#define H_SGTTY_H
+
 /*
  * Structures and constants used in IOCTL system call and IOCTL.
  *
@@ -37,3 +40,5 @@ struct tchars {
 #define TIOCSETP (('t'<<8) | 9)
 #define TIOCGETC (('t'<<8) | 18)
 #define TIOCSETC (('t'<<8) | 17)
+
+#end if                         /* H_SGTTY_H */

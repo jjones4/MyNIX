@@ -1,3 +1,6 @@
+#ifndef H_STAT_H
+#define H_STAT_H
+
 /*
  * Structure returned by STAT and FSTAT system calls.
  *
@@ -32,3 +35,5 @@ struct stat {
 #define S_IREAD   00400		/* read permission, owner */
 #define S_IWRITE  00200		/* write permission, owner */
 #define S_IEXEC   00100		/* execute/search permission, owner */
+
+#endif                      /* H_STAT_H */

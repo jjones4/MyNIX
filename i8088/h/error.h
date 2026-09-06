@@ -1,3 +1,6 @@
+#ifndef H_ERROR_H
+#define H_ERROR_H
+
 /* 
  * Error messages returned to user programs if sys call fails, among other errors.
  *
@@ -65,3 +68,5 @@
 #define E_BAD_FCN         -9	/* only valid fcns are SEND, RECEIVE, BOTH */
 #define E_BAD_ADDR       -10	/* bad address given to utility routine */
 #define E_BAD_PROC       -11	/* bad proc number given to utility */
+
+#endif                          /* H_ERROR_H */

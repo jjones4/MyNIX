@@ -1,3 +1,6 @@
+#ifndef H_CONST_H
+#define H_CONST_H
+
 /* Copyright (C) 1987 by Prentice-Hall, Inc.  Permission is hereby granted to
  * private individuals and educational institutions to modify and
  * redistribute the binary and source programs of this system to other
@@ -118,3 +121,5 @@
 #define W_BIT           0000002	/* rWx protection bit */
 #define X_BIT           0000001	/* rwX protection bit */
 #define I_NOT_ALLOC     0000000	/* this inode is free */
+
+#endif                          /* H_CONST_H */

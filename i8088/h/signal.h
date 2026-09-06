@@ -1,3 +1,6 @@
+#ifndef H_SIGNAL_H
+#define H_SIGNAL_H
+
 #define NR_SIGS           16	/* number of signals used */
 #define NSIG              16	/* number of signals used */
 
@@ -22,3 +25,5 @@
 int	(*signal())();
 #define	SIG_DFL	(int (*)())0
 #define	SIG_IGN	(int (*)())1
+
+#endif                          /* H_SIGNAL_H */

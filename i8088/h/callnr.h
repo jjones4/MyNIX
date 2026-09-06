@@ -1,3 +1,6 @@
+#ifndef H_CALLNR_H
+#define H_CALLNR_H
+
 /*
  * Processes send messages to MM or FS. These messages contain the number of
  * system call the process wants.
@@ -57,3 +60,5 @@
 #define BRK2	          66	/* to MM: used to say how big FS & INIT are */
 #define REVIVE            67	/* to FS: revive a sleeping process */
 #define TASK_REPLY        68	/* to FS: reply code from tty task */
+
+#endif                          /* H_CALLNR_H */

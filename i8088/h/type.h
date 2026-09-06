@@ -1,3 +1,6 @@
+#ifndef H_TYPE_H
+#define H_TYPE_H
+
 /* Macros */
 #define MAX(a,b)	(a > b ? a : b)
 #define MIN(a,b)	(a < b ? a : b)
@@ -114,7 +117,7 @@ struct mem_map {
   vir_clicks mem_len;		/* length */
 };
 
-struct copy_info {		/* used by sys_copy(src, dst, bytes) */
+struct copy_info {		    /* used by sys_copy(src, dst, bytes) */
 	int cp_src_proc;
 	int cp_src_space;
 	vir_bytes cp_src_vir;
@@ -123,3 +126,5 @@ struct copy_info {		/* used by sys_copy(src, dst, bytes) */
 	vir_bytes cp_dst_vir;
 	vir_bytes cp_bytes;
 };
+
+#endif                      /* H_TYPE_H */
