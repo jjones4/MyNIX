@@ -57,6 +57,11 @@ PUBLIC int main(void)
             rp->p_splimit -= (TASK_STACK_BYTES - SAFETY) / sizeof(int);
         rp->p_pcpsw.pc = task[t + NR_TASKS];
         if (rp->p_pcpsw.pc != 0 || t >= 0) ready(rp);
+        rp->p_pcpsw.psw = INIT_PSW;
+        rp->p_flags = 0;
+
+        /*k Set up memory map for tasks and MM< FS, INIT */
+        
     }
 
     return 0;
