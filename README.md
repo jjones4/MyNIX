@@ -4,8 +4,8 @@ This project is for learning purposes.
 
 My learning path is the following:
 1. Add documentation to MyNIX source code as I learn.
-2. Make MyNIX C89 compliant as I go.
-3. Get MyNIX working on i8088 with QEMU.
+2. Make MyNIX C89 compliant as I write and test the code.
+3. Get MyNIX working on x86 in QEMU.
 
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
 
