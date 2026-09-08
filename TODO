@@ -2,3 +2,9 @@
 2. Include the .h files for the tasks in relevant source files.
 3. Fill in the executable code for the ready() function in proc.c, which needs lock().
 4. I'm wondering if I can leave the floppy drive code out of MyNIX since we are using multi-boot and QEMU.
+5. Fix 4 warmings and one NOTE thrown when trying to link.
+   /usr/bin/ld: warning: boot.o: missing .note.GNU-stack section implies executable stack
+   /usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+   /usr/bin/ld: boot.o: warning: relocation in read-only section `.text'
+   /usr/bin/ld: warning: MyNIX.bin has a LOAD segment with RWX permissions
+   /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
