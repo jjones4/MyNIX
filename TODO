@@ -1,6 +1,4 @@
 1. Create .h files for all the tasks (i.e., clock_task, tty_task, etc.) for defines, includes, and function prototypes.
 2. Include the .h files for the tasks in relevant source files.
-3. Fill in the executable code for all the tasks.
-4. Fill in the executable code for the ready() function in proc.c, which needs lock().
-5. Get MyNIX booting in QEMU as quickly as possible for testing.
-6. I'm wondering if I can leave the floppy drive code out of MyNIX and just make a simple bootloader to test MyNIX in QEMU.
+3. Fill in the executable code for the ready() function in proc.c, which needs lock().
+4. I'm wondering if I can leave the floppy drive code out of MyNIX since we are using multi-boot and QEMU.
