@@ -33,3 +33,4 @@ _halt:
     hlt
     jmp _halt
 
+.section .note.GNU-stack,"",@progbits
