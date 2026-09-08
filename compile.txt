@@ -1,4 +1,4 @@
-To comppile each file - note -Di8088 is neede for some files
+To comppile each file - note -Di8088 is needed for some files
 ------------------------------------------------------------
 gcc -g -H -m32 -ffreestanding -std=c89 -O2 -Wall -Wextra -Wpedantic -Wformat=2 -Wno-unused-parameter -Wshadow -Wwrite-strings -Wstrict-prototypes -Wold-style-definition -Wredundant-decls -Wnested-externs -Wmissing-include-dirs -Wjump-misses-init -Wlogical-op -Wmissing-prototypes -Wdeclaration-after-statement -c boot.s -o boot.o
 
