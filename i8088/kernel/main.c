@@ -10,6 +10,7 @@
  *   panic:		abort MINIX due to a fatal error
  */
 
+#include <stdint.h>             /* For printing 'X' at top left of screen */
 #include "../h/const.h"
 #include "../h/type.h"
 #include "../h/callnr.h"
@@ -34,19 +35,22 @@
 
 extern int (*task[])(void);
 
-PUBLIC int main(void)
+int main(void)
 {
-    /*Start the ball rolling. */
-    
     register struct proc *rp;
     register int t;
 
+    __volatile__ uint16_t* vga_buffer = (__volatile__ uint16_t*)0xB8000;
+    vga_buffer[0] = 'X' | (0x0F << 8);
+    while(1)
+        __asm__ __volatile__("hlt");
+    
     /* Set up proc table entry for user processes.  Be very careful about
-   * sp, since the 3 words prior to it will be clobbered when the kernel pushes
-   * pc, cs, and psw onto the USER's stack when starting the user the first
-   * time.  This means that with initial sp = 0x10, user programs must leave 
-   * the words at 0x000A, 0x000C, and 0x000E free.
-   */
+     * sp, since the 3 words prior to it will be clobbered when the kernel pushes
+     * pc, cs, and psw onto the USER's stack when starting the user the first
+     * time.  This means that with initial sp = 0x10, user programs must leave 
+     * the words at 0x000A, 0x000C, and 0x000E free.
+     */
 
     for (rp = &proc[0]; rp <= &proc[NR_TASKS + LOW_USER]; rp++) {
         for (t = 0; t < NR_REGS; t++) rp->p_reg[t] = 0100 * t;  /* DEBUG */
@@ -59,9 +63,6 @@ PUBLIC int main(void)
         if (rp->p_pcpsw.pc != 0 || t >= 0) ready(rp);
         rp->p_pcpsw.psw = INIT_PSW;
         rp->p_flags = 0;
-
-        /*k Set up memory map for tasks and MM< FS, INIT */
-        
     }
 
     return 0;
