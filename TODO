@@ -8,3 +8,4 @@
    /usr/bin/ld: boot.o: warning: relocation in read-only section `.text'
    /usr/bin/ld: warning: MyNIX.bin has a LOAD segment with RWX permissions
    /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+6. Get a Makefile going as soon as possible.
