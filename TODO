@@ -5,3 +5,4 @@
    /usr/bin/ld: boot.o: warning: relocation in read-only section `.text'
    /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
 5. Create a better Makefile.
+6. Add -H flag to CFLAGS every once in a while to check for multiple includes
