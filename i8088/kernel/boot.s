@@ -1,5 +1,4 @@
 # Multiboot 1 Header Constants
-.section .data
 .set MAGIC,    0x1BADB002       # 'magic number' lets bootloader find the header
 .set FLAGS,    0x00000003       # align modules and provide memory map
 .set CHECKSUM, -(MAGIC + FLAGS) # checksum to prove we are multiboot

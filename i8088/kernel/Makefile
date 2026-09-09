@@ -8,7 +8,7 @@ CFLAGS  = -Di8088 -g -fno-pie -ffreestanding -std=c89 -O2 -Wall -Wextra -Wpedant
 
 ASFLAGS = -g -c -fno-pie -ffreestanding -nostdlib
 
-LDFLAGS = -T linker.ld -nostdlib -z -noexecstack -ffreestanding
+LDFLAGS = -T linker.ld -nostdlib -ffreestanding -z noexecstack
 
 # Object files
 OBJS = boot.o clock.o floppy.o main.o memory.o printer.o proc.o system.o table.o tty.o wini.o
