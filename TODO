@@ -1,9 +1,7 @@
 1. Create .h files for all the tasks (i.e., clock_task, tty_task, etc.) for defines, includes, and function prototypes.
-2. Include the .h files for the tasks in relevant source files.
-3. Fill in the executable code for the ready() function in proc.c, which needs lock().
-4. I'm wondering if I can leave the floppy drive code out of MyNIX since we are using multi-boot and QEMU.
-5. Fix 3 warmings when trying to link.
+2. Fill in the executable code for the ready() function in proc.c, which needs lock().
+3. I'm wondering if I can leave the floppy drive code out of MyNIX since we are using multi-boot and QEMU.
+4. Fix 2 warmings when trying to link.
    /usr/bin/ld: boot.o: warning: relocation in read-only section `.text'
-   /usr/bin/ld: warning: MyNIX.bin has a LOAD segment with RWX permissions
    /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
-6. Get a Makefile going as soon as possible.
+5. Create a better Makefile.
