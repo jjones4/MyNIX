@@ -21,8 +21,8 @@ MyNIX.bin: $(OBJS)
 	$(LD) $(LDFLAGS) -o MyNIX.bin $(OBJS)
 
 # Boot file
-boot.o: boot.s
-	$(AS) $(ASFLAGS) -c boot.s -o boot.o
+boot.o: boot.S
+	$(AS) $(ASFLAGS) -c boot.S -o boot.o
 
 #Source files
 clock.o: clock.c
