@@ -37,11 +37,26 @@ extern int (*task[])(void);
 
 int main(void)
 {
+    int i;
     register struct proc *rp;
     register int t;
 
     __volatile__ uint16_t* vga_buffer = (__volatile__ uint16_t*)0xB8000;
-    vga_buffer[0] = 'X' | (0x0F << 8);
+
+    for(i = 0; i < 114; i++) {
+        vga_buffer[i] = ' ' | (0x0F << 8);
+    }
+
+    vga_buffer[114] = 'M' | (0x0F << 8);
+    vga_buffer[115] = 'y' | (0x0F << 8);
+    vga_buffer[116] = 'N' | (0x0F << 8);
+    vga_buffer[117] = 'I' | (0x0F << 8);
+    vga_buffer[118] = 'X' | (0x0F << 8);
+
+    for(i = 119; i < 2000; i++) {
+        vga_buffer[i] = ' ' | (0x0F << 8);
+    }
+
     while(1)
         __asm__ __volatile__("hlt");
     
