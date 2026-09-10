@@ -2,4 +2,4 @@ We currently boot in QEMU!
 
 'X' is successfully displayed at the top left of the screen!
 
-qemu-system-i386 -kernel MyNIX.bin
+qemu-system-i386 -kernel MyNIX.elf
