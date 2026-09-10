@@ -13,10 +13,10 @@ LDFLAGS = -T linker.ld -z noexecstack
 # Object files
 OBJS = boot.o clock.o floppy.o main.o memory.o printer.o proc.o system.o table.o tty.o wini.o
 
-# Define the default target at the very top
+# Define the default target first
 all: MyNIX.bin
 
-#Link
+# Link
 MyNIX.bin: $(OBJS)
 	$(LD) $(LDFLAGS) -o MyNIX.bin $(OBJS)
 
