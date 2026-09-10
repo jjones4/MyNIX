@@ -1,8 +1,5 @@
 1. Create .h files for all the tasks (i.e., clock_task, tty_task, etc.) for defines, includes, and function prototypes.
 2. Fill in the executable code for the ready() function in proc.c, which needs lock().
 3. I'm wondering if I can leave the floppy drive code out of MyNIX since we are using multi-boot and QEMU.
-4. Fix 2 warmings when trying to link.
-   /usr/bin/ld: boot.o: warning: relocation in read-only section `.text'
-   /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
-5. Create a better Makefile.
-6. Add -H flag to CFLAGS every once in a while to check for multiple includes
+4. Create a better Makefile.
+5. Add -H flag to CFLAGS every once in a while to check for multiple includes
