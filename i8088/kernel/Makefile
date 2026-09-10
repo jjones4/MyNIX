@@ -1,14 +1,14 @@
 # Toolchain
 CC = gcc -m32
 AS = gcc -m32
-LD = gcc -m32
+LD = ld -m elf_i386
 
 # Compiler and Linker flags
 CFLAGS  = -Di8088 -g -fno-pie -ffreestanding -std=c89 -O2 -Wall -Wextra -Wpedantic -Wformat=2 -Wno-unused-parameter -Wshadow -Wwrite-strings -Wstrict-prototypes -Wold-style-definition -Wredundant-decls -Wnested-externs -Wmissing-include-dirs -Wjump-misses-init -Wlogical-op -Wmissing-prototypes -Wdeclaration-after-statement
 
 ASFLAGS = -g -c -fno-pie -ffreestanding -nostdlib
 
-LDFLAGS = -T linker.ld -nostdlib -ffreestanding -z noexecstack
+LDFLAGS = -T linker.ld -z noexecstack
 
 # Object files
 OBJS = boot.o clock.o floppy.o main.o memory.o printer.o proc.o system.o table.o tty.o wini.o
@@ -18,7 +18,7 @@ all: MyNIX.bin
 
 #Link
 MyNIX.bin: $(OBJS)
-	$(LD) $(LDFLAGS) -o MyNIX.bin $(OBJS)
+	$(LD) $(LDFLAGS) -o MyNIX.elf $(OBJS)
 
 # Boot file
 boot.o: boot.S
