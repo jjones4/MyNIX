@@ -18,7 +18,7 @@ all: MyNIX.bin
 
 #Link
 MyNIX.bin: $(OBJS)
-	$(LD) $(LDFLAGS) -o MyNIX.elf $(OBJS)
+	$(LD) $(LDFLAGS) -o MyNIX.bin $(OBJS)
 
 # Boot file
 boot.o: boot.S
