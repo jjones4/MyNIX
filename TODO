@@ -3,5 +3,4 @@
 3. I'm wondering if I can leave the floppy drive code out of MyNIX since we are using multi-boot and QEMU.
 4. Create a better Makefile.
 5. Add -H flag to CFLAGS every once in a while to check for multiple includes
-6. Determine if I need to remove or re-work i8088 specific code, such as code following #ifndef i8088
-7. Determine the target architecture and get gcc, ld, and qemu set up for it.
+6. Remove or rework i8088 specific code, such as code following #ifndef i8088.
