@@ -10,7 +10,7 @@
  *   panic:		abort MINIX due to a fatal error
  */
 
-#include <stdint.h>             /* For printing 'X' at top left of screen */
+#include <stdint.h>             /* For printing characters (remove later for cleanup)  */
 #include "../h/const.h"
 #include "../h/type.h"
 #include "../h/callnr.h"
@@ -21,7 +21,7 @@
 #include "glo.h"
 #include "proc.h"
 
-#define SAFETY             8	/* margin of safety for stack overflow (ints)*/
+#define SAFETY             8	/* margin of safety for stack overflow (ints) */
 #define VERY_BIG       39328	/* must be bigger than kernel size (clicks) */
 #define BASE            1536	/* address where MINIX starts in memory */
 #define SIZES              8	/* sizes array has 8 entries */
