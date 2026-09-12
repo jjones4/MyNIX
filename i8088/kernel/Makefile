@@ -1,6 +1,6 @@
 # Toolchain
 CC = gcc -m32
-AS = gcc -m16
+AS = gcc -m32
 LD = ld -m elf_i386
 
 # Compiler and Linker flags
