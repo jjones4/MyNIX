@@ -10,7 +10,7 @@
  *   panic:		abort MINIX due to a fatal error
  */
 
-#include <stdint.h>             /* For printing characters (remove later for cleanup)  */
+#include <stdint.h>             /* For printing characters */
 #include "../h/const.h"
 #include "../h/type.h"
 #include "../h/callnr.h"
@@ -21,7 +21,7 @@
 #include "glo.h"
 #include "proc.h"
 
-#define SAFETY             8	/* margin of safety for stack overflow (ints) */
+#define SAFETY             8	/* safety margin for stack overflow (ints) */
 #define VERY_BIG       39328	/* must be bigger than kernel size (clicks) */
 #define BASE            1536	/* address where MINIX starts in memory */
 #define SIZES              8	/* sizes array has 8 entries */
@@ -33,19 +33,16 @@
  *                                   main                                     *
  *============================================================================*/
 
-extern int (*task[])(void);
+extern void lock(void);
 
-int main(void)
+PUBLIC int main(void)
 {
     int i;
-    register struct proc *rp;
-    register int t;
 
     __volatile__ uint16_t* vga_buffer = (__volatile__ uint16_t*)0xB8000;
 
-    for(i = 0; i < 114; i++) {
+    for(i = 0; i < 114; i++)
         vga_buffer[i] = ' ' | (0x0F << 8);
-    }
 
     vga_buffer[114] = 'M' | (0x0F << 8);
     vga_buffer[115] = 'y' | (0x0F << 8);
@@ -53,13 +50,12 @@ int main(void)
     vga_buffer[117] = 'I' | (0x0F << 8);
     vga_buffer[118] = 'X' | (0x0F << 8);
 
-    for(i = 119; i < 2000; i++) {
+    for(i = 119; i < 2000; i++)
         vga_buffer[i] = ' ' | (0x0F << 8);
-    }
 
     while(1)
         __asm__ __volatile__("hlt");
-    
+  
     /* Set up proc table entry for user processes.  Be very careful about
      * sp, since the 3 words prior to it will be clobbered when the kernel pushes
      * pc, cs, and psw onto the USER's stack when starting the user the first
@@ -67,18 +63,7 @@ int main(void)
      * the words at 0x000A, 0x000C, and 0x000E free.
      */
 
-    for (rp = &proc[0]; rp <= &proc[NR_TASKS + LOW_USER]; rp++) {
-        for (t = 0; t < NR_REGS; t++) rp->p_reg[t] = 0100 * t;  /* DEBUG */
-        t = rp - proc - NR_TASKS;                               /* task number */
-        rp->p_sp = (rp < &proc[NR_TASKS] ? t_stack[NR_TASKS + t + 1].stk : INIT_SP);
-        rp->p_splimit = rp->p_sp;
-        if (rp->p_splimit != INIT_SP)
-            rp->p_splimit -= (TASK_STACK_BYTES - SAFETY) / sizeof(int);
-        rp->p_pcpsw.pc = task[t + NR_TASKS];
-        if (rp->p_pcpsw.pc != 0 || t >= 0) ready(rp);
-        rp->p_pcpsw.psw = INIT_PSW;
-        rp->p_flags = 0;
-    }
+    lock();
 
     return 0;
 }

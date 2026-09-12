@@ -1,6 +1,6 @@
 # Toolchain
 CC = gcc -m32
-AS = gcc -m32
+AS = gcc -m16
 LD = ld -m elf_i386
 
 # Compiler and Linker flags
@@ -11,7 +11,7 @@ ASFLAGS = -g -c -fno-pie -ffreestanding -nostdlib
 LDFLAGS = -T linker.ld -z noexecstack
 
 # Object files
-OBJS = boot.o clock.o floppy.o main.o memory.o printer.o proc.o system.o table.o tty.o wini.o
+OBJS = boot.o clock.o floppy.o main.o memory.o printer.o proc.o system.o table.o tty.o wini.o klib88.o
 
 # Define the default target first
 all: MyNIX.bin
@@ -54,3 +54,6 @@ tty.o: tty.c
 
 wini.o: wini.c
 	$(CC) $(CFLAGS) -c wini.c -o wini.o
+
+klib88.o: klib88.s
+	$(AS) $(ASFLAGS) -c klib88.s -o klib88.o
