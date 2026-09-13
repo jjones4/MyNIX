@@ -3,6 +3,9 @@
 
 /* Global variables used in the kernel. */
 
+/* Interrupts */
+EXTERN void lock(void);             /* disable interrupts */
+
 /* Clocks and timers */
 EXTERN real_time realtime;	        /* real time clock */
 EXTERN int lost_ticks;		        /* incremented when clock int can't send mess*/
