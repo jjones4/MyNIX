@@ -11,7 +11,7 @@
  */
 
 #include <stdint.h>             /* For printing characters */
-#include "interrupts.h"
+#include "interrupt.h"
 
 /*============================================================================*
  *                                   main                                     *
