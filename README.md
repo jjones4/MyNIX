@@ -4,9 +4,8 @@ This project is for learning purposes.
 
 My learning path is the following:
 1. Add documentation to MyNIX source code as I learn.
-2. Make MyNIX C89 compliant as I write and test the code.
-3. Get MyNIX working on x86 in QEMU.
-   (Note: MyNIX is compiled with 32 bit flags, but the assembly is written for i8088.)
+2. Make MyNIX C89 compliant as I add and test more code.
+3. Get MyNIX working on x86 in QEMU by writing the assembly for 32 bit protected mode and compiling with m32 flag.
 
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
 
