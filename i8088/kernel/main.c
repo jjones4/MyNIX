@@ -12,6 +12,15 @@
 
 #include <stdint.h>             /* For printing characters */
 #include "interrupt.h"
+#include "../h/const.h"
+#include "../h/type.h"
+#include "../h/callnr.h"
+#include "../h/com.h"
+#include "../h/error.h"
+#include "const.h"
+#include "type.h"
+#include "glo.h"
+#include "proc.h"
 
 /*============================================================================*
  *                                   main                                     *
@@ -20,6 +29,7 @@
 int main(void)
 {
     int i;
+    register struct proc *rp;
 
     __volatile__ uint16_t* vga_buffer = (__volatile__ uint16_t*)0xB8000;
 
@@ -46,6 +56,10 @@ int main(void)
      */
 
     lock();
+
+    for (rp = &proc[0]; rp <=&proc[NR_TASKS + LOW_USER]; rp++) {
+        
+    }
 
     return 0;
 }
