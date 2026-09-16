@@ -22,6 +22,8 @@
 #include "glo.h"
 #include "proc.h"
 
+#define SAFETY          8       /* margin of safety for stack overflow (ints) */
+
 /*============================================================================*
  *                                   main                                     *
  *============================================================================*/
@@ -30,6 +32,7 @@ int main(void)
 {
     int i;
     register struct proc *rp;
+    register int t;
 
     __volatile__ uint16_t* vga_buffer = (__volatile__ uint16_t*)0xB8000;
 
@@ -57,8 +60,13 @@ int main(void)
 
     lock();
 
-    for (rp = &proc[0]; rp <=&proc[NR_TASKS + LOW_USER]; rp++) {
-        
+    for (rp = &proc[0]; rp <= &proc[NR_TASKS + LOW_USER]; rp++) {
+        for (t = 0; t < NR_REGS; t++) rp->p_reg[t] = 0100 * t; /* DEBUG */
+        t = rp - proc - NR_TASKS;       /* task number */
+        rp->p_sp = (rp < &proc[NR_TASKS] ? t_stack[NR_TASKS + t + 1].stk : INIT_SP);        
+        rp->p_splimit = rp->p_sp;
+        if (rp->p_splimit != INIT_SP)
+            rp->p_splimit -= (TASK_STACK_BYTES - SAFETY) / sizeof(int);
     }
 
     return 0;
