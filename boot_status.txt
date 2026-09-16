@@ -1,4 +1,4 @@
-We currently boot in QEMU!
+We still boot in QEMU!
 
 'MyNIX' is successfully displayed on the screen!
 
