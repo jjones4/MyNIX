@@ -18,7 +18,7 @@
 #   wreboot:	wait for character then reboot 
 
 # The following procedures are defined in this file and called from outside it.
-.global lock
+.global lock, restore
 
 # The following external procedure is called in this file.
 
@@ -32,10 +32,19 @@
 .type lock, @function
 
 lock:
-    pushf
-    cli
-    pop lockvar
-    ret
+    pushf                   # save flags on stack
+    cli                     # disable interrupts
+    pop lockvar             # save flags for possible restoration later
+    ret                     # return to caller
+
+#*===========================================================================*
+#*				restore					                                     *
+#*===========================================================================*
+# Restore enable/disable bit to the value it had before last lock.
+restore:
+	push lockvar		    # push flags as they were before previous lock
+	popf			        # restore flags
+	ret			            # return to caller
 
 .data
 

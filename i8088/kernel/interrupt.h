@@ -4,5 +4,6 @@
 #define K_INTERRUPTS_H
 
 void lock(void);
+void restore(void);
 
 #endif                      /* K_INTERRUPTS_H */

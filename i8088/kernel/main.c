@@ -24,6 +24,8 @@
 
 #define SAFETY          8       /* margin of safety for stack overflow (ints) */
 
+extern int (*task[])(void);
+
 /*============================================================================*
  *                                   main                                     *
  *============================================================================*/
@@ -45,12 +47,9 @@ int main(void)
     vga_buffer[117] = 'I' | (0x0F << 8);
     vga_buffer[118] = 'X' | (0x0F << 8);
 
-    for(i = 119; i < 2000; i++)
+    for(i = 119; i < 513; i++)
         vga_buffer[i] = ' ' | (0x0F << 8);
 
-    while(1)
-        __asm__ __volatile__("hlt");
-  
     /* Set up proc table entry for user processes.  Be very careful about
      * sp, since the 3 words prior to it will be clobbered when the kernel pushes
      * pc, cs, and psw onto the USER's stack when starting the user the first
@@ -59,7 +58,7 @@ int main(void)
      */
 
     lock();
-
+    
     for (rp = &proc[0]; rp <= &proc[NR_TASKS + LOW_USER]; rp++) {
         for (t = 0; t < NR_REGS; t++) rp->p_reg[t] = 0100 * t; /* DEBUG */
         t = rp - proc - NR_TASKS;       /* task number */
@@ -67,7 +66,22 @@ int main(void)
         rp->p_splimit = rp->p_sp;
         if (rp->p_splimit != INIT_SP)
             rp->p_splimit -= (TASK_STACK_BYTES - SAFETY) / sizeof(int);
+        rp->p_pcpsw.pc = task[t + NR_TASKS];
+        if (rp->p_pcpsw.pc != 0 || t >= 0) ready(rp);
+        rp->p_pcpsw.psw = INIT_PSW;
+        rp->p_flags = 0;
     }
+
+    vga_buffer[513] = 'L' | (0x0F << 8);
+    vga_buffer[514] = 'N' | (0x0F << 8);
+    vga_buffer[515] = '=' | (0x0F << 8);
+    vga_buffer[516] = '0' | (0x0F << 8);
+    vga_buffer[517] = '9' | (0x0F << 8);
+    vga_buffer[518] = '1' | (0x0F << 8);
+    vga_buffer[519] = '7' | (0x0F << 8);
+
+    for(i = 520; i < 801; i++)
+        vga_buffer[i] = ' ' | (0x0F << 8);
 
     return 0;
 }
