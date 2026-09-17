@@ -7,7 +7,7 @@ My learning path is the following:
 2. Make MyNIX C89 compliant as I add and test code.
 3. Get MyNIX working on x86 in QEMU by writing the assembly for 32 bit protected mode and compiling with m32 flag.
 
-Status:
+Status:  
 We currently boot in QEMU, and 'MyNIX LN=0917' is displayed on the screen. LN=0917 is the line number in the source code listing up to which the code is working in QEMU from main.c.
 
 Use the following to run MyNIX in QEMU after running 'make':  
