@@ -1,7 +1,0 @@
-We still boot in QEMU!
-
-'MyNIX' is successfully displayed on the screen followed by LN=0917.
-
-This confirms we are getting to the code at the given line number in the original source listing in the 1987 book.
-
-qemu-system-i386 -kernel MyNIX.elf
