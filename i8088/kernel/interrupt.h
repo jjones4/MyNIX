@@ -1,9 +1,9 @@
 /* For enabling/disabling interrupts and restoring flags */
 
-#ifndef K_INTERRUPTS_H
-#define K_INTERRUPTS_H
+#ifndef K_INTERRUPT_H
+#define K_INTERRUPT_H
 
 void lock(void);
 void restore(void);
 
-#endif                      /* K_INTERRUPTS_H */
+#endif                      /* K_INTERRUPT_H */

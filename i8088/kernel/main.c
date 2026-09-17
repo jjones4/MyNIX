@@ -11,7 +11,6 @@
  */
 
 #include <stdint.h>             /* For printing characters */
-#include "interrupt.h"
 #include "../h/const.h"
 #include "../h/type.h"
 #include "../h/callnr.h"
@@ -21,6 +20,7 @@
 #include "type.h"
 #include "glo.h"
 #include "proc.h"
+#include "interrupt.h"
 
 #define SAFETY          8       /* margin of safety for stack overflow (ints) */
 
