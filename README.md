@@ -7,6 +7,11 @@ My learning path is the following:
 2. Make MyNIX C89 compliant as I add and test more code.
 3. Get MyNIX working on x86 in QEMU by writing the assembly for 32 bit protected mode and compiling with m32 flag.
 
+We currently boot in QEMU, and 'MyNIX LN=0917' is displayed on the screen.
+
+Use the following to run MyNIX in QEMU after running 'make':
+&emsp; qemu-system-i386 -kernel MyNIX.elf
+
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
 
 Tanenbaum, Andrew S. 1987. Operating Systems: Design and Implementation.  
