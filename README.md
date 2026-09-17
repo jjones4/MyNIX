@@ -9,7 +9,7 @@ My learning path is the following:
 
 We currently boot in QEMU, and 'MyNIX LN=0917' is displayed on the screen.
 
-Use the following to run MyNIX in QEMU after running 'make':
+Use the following to run MyNIX in QEMU after running 'make':  
 &emsp; qemu-system-i386 -kernel MyNIX.elf
 
 The project incorporates educational code from MINIX 1, Andrew S. Tanenbaum.
